@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="utf-8">
+        <title>景點介紹 — 彰化觀光旅遊網</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="彰化景點,鹿港,八卦山,田尾花園,王功漁港" name="keywords">
+        <meta content="彰化縣精選觀光景點介紹" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Noto+Sans+TC&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- 圖片統一高度 -->
+        <style>
+            .destination-img { overflow: hidden; height: 250px; }
+            .destination-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+            .col-xl-4 .destination-img { height: 100%; min-height: 516px; }
+            .col-lg-4 .destination-img { height: 220px; }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                        <small class="text-light ms-3"><i class="fa fa-phone me-2"></i>彰化旅遊諮詢：04-7228-872</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <small class="text-light me-3"><i class="fa fa-map-marker-alt me-2"></i>彰化縣政府觀光處</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>彰化觀光</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">首頁</a>
+                        <a href="destination.html" class="nav-item nav-link active">景點介紹</a>
+                        <a href="packages.html" class="nav-item nav-link">行程推薦</a>
+                        <a href="gallery.html" class="nav-item nav-link">彰化相簿</a>
+                        <a href="contact.html" class="nav-item nav-link">聯絡我們</a>
+                    </div>
+                    <a href="destination.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">探索景點</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">彰化景點介紹</h3>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                    <li class="breadcrumb-item active text-white">景點介紹</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Destination Start -->
+        <div class="container-fluid destination py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">彰化景點</h5>
+                    <h1 class="mb-0">精選必訪景點</h1>
+                </div>
+                <div class="tab-class text-center">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                                <span class="text-dark" style="width: 150px;">全部</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                                <span class="text-dark" style="width: 150px;">古蹟廟宇</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                                <span class="text-dark" style="width: 150px;">自然花園</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                                <span class="text-dark" style="width: 150px;">夕陽海景</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                                <span class="text-dark" style="width: 150px;">博物館</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+
+                        <!-- 全部 -->
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-xl-8">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="destination-img">
+                                                <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_C100_441_19.jpg&sizetype=2" alt="鹿港老街">
+                                                <div class="destination-overlay p-4">
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                                    <h4 class="text-white mb-2 mt-3">鹿港老街</h4>
+                                                    <p class="text-white small mb-2">百年歷史老街，保留清代建築風貌，傳統小吃與工藝品琳瑯滿目。</p>
+                                                    <a href="https://maps.google.com/?q=鹿港老街" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="destination-img">
+                                                <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_254_15.jpg&sizetype=2" alt="田尾公路花園">
+                                                <div class="destination-overlay p-4">
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">田尾鄉</a>
+                                                    <h4 class="text-white mb-2 mt-3">田尾公路花園</h4>
+                                                    <p class="text-white small mb-2">花的故鄉，四季花開不斷，單車漫遊最佳去處。</p>
+                                                    <a href="https://maps.google.com/?q=田尾公路花園" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="destination-img">
+                                                <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2155_17.jpg&sizetype=2" alt="鹿港天后宮">
+                                                <div class="destination-overlay p-4">
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                                    <h4 class="text-white mb-2 mt-3">鹿港天后宮</h4>
+                                                    <p class="text-white small mb-2">全台最重要媽祖廟之一，國家一級古蹟，香火鼎盛。</p>
+                                                    <a href="https://maps.google.com/?q=鹿港天后宮" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="destination-img">
+                                                <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2156_17.jpg&sizetype=2" alt="鹿港龍山寺">
+                                                <div class="destination-overlay p-4">
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                                    <h4 class="text-white mb-2 mt-3">鹿港龍山寺</h4>
+                                                    <p class="text-white small mb-2">臺灣紫禁城美譽，清代閩南建築藝術極致呈現。</p>
+                                                    <a href="https://maps.google.com/?q=鹿港龍山寺" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="destination-img h-100">
+                                        <img class="img-fluid rounded w-100 h-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2154_25.jpg&sizetype=2" style="object-fit: cover; min-height: 300px;" alt="八卦山大佛">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">彰化市</a>
+                                            <h4 class="text-white mb-2 mt-3">八卦山大佛</h4>
+                                            <p class="text-white small mb-2">高22公尺的彰化地標，俯瞰整個彰化平原，視野遼闊。</p>
+                                            <a href="https://maps.google.com/?q=八卦山大佛" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_9489_10.jpg&sizetype=2" alt="王功漁港">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">芳苑鄉</a>
+                                            <h4 class="text-white mb-2 mt-3">王功漁港</h4>
+                                            <p class="text-white small mb-2">絕美夕陽與潮間帶生態，攝影愛好者必訪聖地。</p>
+                                            <a href="https://maps.google.com/?q=王功漁港" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2157_14.jpg&sizetype=2" alt="鹿港民俗文物館">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                            <h4 class="text-white mb-2 mt-3">鹿港民俗文物館</h4>
+                                            <p class="text-white small mb-2">館藏六千件珍貴文物，巴洛克洋樓中西合璧之美。</p>
+                                            <a href="https://maps.google.com/?q=鹿港民俗文物館" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_A12-00192_4.jpg&sizetype=2" alt="芳苑燈塔">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">芳苑鄉</a>
+                                            <h4 class="text-white mb-2 mt-3">芳苑燈塔</h4>
+                                            <p class="text-white small mb-2">白色燈塔矗立海岸，與夕陽相映成趣，景色迷人。</p>
+                                            <a href="https://maps.google.com/?q=芳苑燈塔" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 古蹟廟宇 -->
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2155_17.jpg&sizetype=2" alt="鹿港天后宮">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                            <h4 class="text-white mb-2 mt-3">鹿港天后宮</h4>
+                                            <a href="https://maps.google.com/?q=鹿港天后宮" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2156_17.jpg&sizetype=2" alt="鹿港龍山寺">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                            <h4 class="text-white mb-2 mt-3">鹿港龍山寺</h4>
+                                            <a href="https://maps.google.com/?q=鹿港龍山寺" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2154_25.jpg&sizetype=2" alt="八卦山大佛">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">彰化市</a>
+                                            <h4 class="text-white mb-2 mt-3">八卦山大佛</h4>
+                                            <a href="https://maps.google.com/?q=八卦山大佛" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_C100_441_19.jpg&sizetype=2" alt="鹿港老街">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                            <h4 class="text-white mb-2 mt-3">鹿港老街</h4>
+                                            <a href="https://maps.google.com/?q=鹿港老街" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 自然花園 -->
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_254_15.jpg&sizetype=2" alt="田尾公路花園">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">田尾鄉</a>
+                                            <h4 class="text-white mb-2 mt-3">田尾公路花園</h4>
+                                            <a href="https://maps.google.com/?q=田尾公路花園" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2154_25.jpg&sizetype=2" alt="八卦山風景區">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">彰化市</a>
+                                            <h4 class="text-white mb-2 mt-3">八卦山風景區</h4>
+                                            <a href="https://maps.google.com/?q=八卦山風景區" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 夕陽海景 -->
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_9489_10.jpg&sizetype=2" alt="王功漁港">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">芳苑鄉</a>
+                                            <h4 class="text-white mb-2 mt-3">王功漁港夕陽</h4>
+                                            <a href="https://maps.google.com/?q=王功漁港" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_A12-00192_4.jpg&sizetype=2" alt="芳苑燈塔">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">芳苑鄉</a>
+                                            <h4 class="text-white mb-2 mt-3">芳苑燈塔</h4>
+                                            <a href="https://maps.google.com/?q=芳苑燈塔" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 博物館 -->
+                        <div id="tab-5" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2157_14.jpg&sizetype=2" alt="鹿港民俗文物館">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                            <h4 class="text-white mb-2 mt-3">鹿港民俗文物館</h4>
+                                            <a href="https://maps.google.com/?q=鹿港民俗文物館" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_11653.gif" alt="臺灣玻璃館">
+                                        <div class="destination-overlay p-4">
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">鹿港鎮</a>
+                                            <h4 class="text-white mb-2 mt-3">臺灣玻璃館</h4>
+                                            <a href="https://maps.google.com/?q=臺灣玻璃館" target="_blank" class="btn-hover text-white">Google地圖 <i class="fa fa-arrow-right ms-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Destination End -->
+
+        <!-- Subscribe Start -->
+        <div class="container-fluid subscribe py-5">
+            <div class="container text-center py-5">
+                <div class="mx-auto text-center" style="max-width: 900px;">
+                    <h5 class="subscribe-title px-3">訂閱電子報</h5>
+                    <h1 class="text-white mb-4">掌握彰化最新旅遊資訊</h1>
+                    <p class="text-white mb-5">訂閱彰化觀光電子報，第一時間獲得最新景點資訊、節慶活動、在地美食推薦，讓您的彰化之旅更加豐富精彩！</p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="請輸入您的電子信箱">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">訂閱</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">聯絡資訊</h4>
+                            <a href=""><i class="fas fa-home me-2"></i>彰化縣彰化市中山路二段416號</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i>tourism@chcg.gov.tw</a>
+                            <a href=""><i class="fas fa-phone me-2"></i>04-7228-872</a>
+                            <a href="" class="mb-3"><i class="fas fa-clock me-2"></i>週一至週五 08:00–17:00</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">熱門景點</h4>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>鹿港老街</a>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>八卦山大佛</a>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>田尾公路花園</a>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>王功漁港</a>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>鹿港天后宮</a>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>鹿港龍山寺</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">快速連結</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i>首頁</a>
+                            <a href="destination.html"><i class="fas fa-angle-right me-2"></i>景點介紹</a>
+                            <a href="packages.html"><i class="fas fa-angle-right me-2"></i>行程推薦</a>
+                            <a href="gallery.html"><i class="fas fa-angle-right me-2"></i>彰化相簿</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i>聯絡我們</a>
+                            <a href="https://tourism.chcg.gov.tw" target="_blank"><i class="fas fa-angle-right me-2"></i>彰化旅遊官網</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">相關資源</h4>
+                            <a href="https://www.taiwan.net.tw/m1.aspx?sNo=0001113" target="_blank"><i class="fas fa-angle-right me-2"></i>交通部觀光署彰化資訊</a>
+                            <a href="https://tourism.chcg.gov.tw" target="_blank"><i class="fas fa-angle-right me-2"></i>彰化縣旅遊資訊網</a>
+                            <a href="https://maps.google.com/?q=彰化縣" target="_blank"><i class="fas fa-angle-right me-2"></i>Google地圖導航</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i>旅遊安全資訊</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">彰化觀光旅遊網</a>，資管一班網頁設計專題
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        Template by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> · Distributed by <a href="https://themewagon.com" class="text-white">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
